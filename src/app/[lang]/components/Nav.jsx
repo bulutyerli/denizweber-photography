@@ -52,8 +52,6 @@ export default function Nav({ navigation, lang }) {
     { key: "contact", name: navigation.contact, route: `/${lang}/contact` },
   ];
 
-  console.log(path);
-
   return (
     <Navbar shouldHideOnScroll maxWidth="full">
       <NavbarContent className="sm:hidden">
