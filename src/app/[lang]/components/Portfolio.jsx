@@ -60,6 +60,7 @@ export default function Portfolio({ images }) {
               </ModalHeader>
               <ModalBody className="max-h-screen">
                 <Image
+                  as={NextImage}
                   className="object-fill"
                   src={selectedImage.imageUrl}
                   width={1200}
