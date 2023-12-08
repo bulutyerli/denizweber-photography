@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "contact": "Contact",
+    "lang": "Language",
+    "portfolio": "Portfolio",
+    "categories": {
+      "baby": "Baby & Family",
+      "wedding": "Wedding",
+      "event": "Event",
+      "product": "Product"
+    }
+  },
+  "button": {
+    "send": "Send"
+  },
+  "categories": {
+    "baby": "Baby & Family Photographs",
+    "wedding": "Wedding Photographs",
+    "event": "Event Photographs",
+    "product": "Product Photographs"
+  },
+  "form": {
+    "title": "Contact Me",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "message": "Message",
+    "enterName": "Enter your name",
+    "enterSurname": "Enter your surname",
+    "enterEmail": "Enter your email address",
+    "enterMessage": "What is your message?"
+  }
+}

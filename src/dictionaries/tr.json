@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "contact": "İletişim",
+    "portfolio": "Portfolyo",
+    "lang": "Dil",
+    "categories": {
+      "baby": "Bebek ve Aile",
+      "wedding": "Düğün",
+      "event": "Etkinlik",
+      "product": "Ürün"
+    }
+  },
+  "button": {
+    "send": "Gönder"
+  },
+  "categories": {
+    "baby": "Bebek ve Aile Fotoğrafları",
+    "wedding": "Düğün Fotoğrafları",
+    "event": "Etkinlik Fotoğrafları",
+    "product": "Ürün Fotoğrafları"
+  },
+  "form": {
+    "title": "Bana Yazın",
+    "name": "Ad",
+    "surname": "Soyad",
+    "email": "E-Posta",
+    "message": "Mesaj",
+    "enterName": "Adınızı yazın",
+    "enterSurname": "Soyadınızı yazın",
+    "enterEmail": "E-Posta adresinizi yazın",
+    "enterMessage": "Mesajınız nedir?"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "lang": "Sprache",
+    "portfolio": "Portfolio",
+    "categories": {
+      "baby": "Baby und Familie",
+      "wedding": "Hochzeit",
+      "event": "Veranstaltung",
+      "product": "Produkt"
+    }
+  },
+  "button": {
+    "send": "Senden"
+  },
+  "categories": {
+    "baby": "Baby- und Familienfotos",
+    "wedding": "Hochzeitsfotos",
+    "event": "Eventfotos",
+    "product": "Produktfotos"
+  },
+  "form": {
+    "title": "Kontaktieren Sie mich",
+    "name": "Name",
+    "surname": "Nachname",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "enterName": "Geben Sie Ihren Namen ein",
+    "enterSurname": "Geben Sie Ihren Nachnamen ein",
+    "enterEmail": "Geben Sie Ihre E-Mail-Adresse ein",
+    "enterMessage": "Was ist Ihre Nachricht?"
+  }
+}
