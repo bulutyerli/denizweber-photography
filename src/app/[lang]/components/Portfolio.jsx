@@ -33,7 +33,7 @@ export default function Portfolio({ images }) {
           >
             <Image
               as={NextImage}
-              className="object-cover h-36 lg:h-96 w-full flex-grow cursor-pointer"
+              className="object-cover h-36 lg:h-96 w-auto flex-grow cursor-pointer"
               src={image.imageUrl}
               height={500}
               width={500}
