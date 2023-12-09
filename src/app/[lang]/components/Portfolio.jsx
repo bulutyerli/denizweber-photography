@@ -15,7 +15,7 @@ import NextImage from "next/image";
 
 export default function Portfolio({ images }) {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
 
   const handleOpen = (image) => {
     setSelectedImage(image);
