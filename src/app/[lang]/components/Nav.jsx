@@ -27,7 +27,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Nav({ navigation, lang }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const path = usePathname();
 
   const { theme } = useTheme();
@@ -53,7 +53,12 @@ export default function Nav({ navigation, lang }) {
   ];
 
   return (
-    <Navbar shouldHideOnScroll maxWidth="full">
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      shouldHideOnScroll
+      maxWidth="full"
+    >
       <NavbarContent className="sm:hidden">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -136,7 +141,6 @@ export default function Nav({ navigation, lang }) {
             key={index}
           >
             <Link
-              onClick={() => setIsMenuOpen(false)}
               color={"foreground"}
               className="w-full"
               href={`/${lang}/${item.key}`}

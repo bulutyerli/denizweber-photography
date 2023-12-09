@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="w-full flex items-center justify-between p-3 text-xs">
       <div>&copy; {year} Deniz Weber. All rights reserved</div>
       <div className="flex gap-3">
-        <Link href="mailto:gmail.com">
+        <Link href="mailto:bulutyerli@gmail.com">
           <Image
             src={gmailIcon}
             alt="gmail icon"
@@ -18,7 +18,11 @@ export default function Footer() {
             height={32}
           ></Image>
         </Link>
-        <Link href="/instagram" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://www.instagram.com/deewbr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={instagramIcon}
             alt="instagram icon"
