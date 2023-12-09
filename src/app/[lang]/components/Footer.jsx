@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import instagramIcon from "public/instagramicon.png";
-import gmailIcon from "public/gmail.png";
+import instagramIcon from "../../../../public/instagramicon.png";
+import gmailIcon from "../../../../public/gmail.png";
 
 export default function Footer() {
   const date = new Date();
