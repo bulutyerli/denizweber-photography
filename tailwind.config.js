@@ -32,7 +32,7 @@ module.exports = {
         light: {
           layout: {},
           colors: {
-            background: "#f4f4f5",
+            background: "#FFFFFF",
             foreground: "#18181B",
             secondary: "#e56b6f",
             primary: "#18181B",
