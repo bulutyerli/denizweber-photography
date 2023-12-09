@@ -13,6 +13,7 @@ export default async function BioPage({ params: { lang } }) {
   );
 
   const text = data.content.split("\n");
+  console.log(data.imageUrl);
 
   return (
     <section className="flex flex-col md:flex-row gap-20 items-center h-full">
