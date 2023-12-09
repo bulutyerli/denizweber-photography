@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import instagramIcon from "public/instagramicon.png";
+import gmailIcon from "public/gmail.png";
 
 export default function Footer() {
   const date = new Date();
@@ -10,7 +12,7 @@ export default function Footer() {
       <div className="flex gap-3">
         <Link href="mailto:gmail.com">
           <Image
-            src="/gmail.png"
+            src={gmailIcon}
             alt="gmail icon"
             width={32}
             height={32}
@@ -18,8 +20,8 @@ export default function Footer() {
         </Link>
         <Link href="/instagram" target="_blank" rel="noopener noreferrer">
           <Image
-            src="/instagram.png"
-            alt="gmail icon"
+            src={instagramIcon}
+            alt="instagram icon"
             width={32}
             height={32}
           ></Image>
