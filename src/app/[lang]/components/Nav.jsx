@@ -14,6 +14,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  dropdown,
 } from "@nextui-org/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoFlowerOutline, IoBalloon } from "react-icons/io5";
@@ -28,6 +29,7 @@ import { usePathname } from "next/navigation";
 
 export default function Nav({ navigation, lang }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const path = usePathname();
 
   const { theme } = useTheme();
@@ -46,11 +48,9 @@ export default function Nav({ navigation, lang }) {
     { key: "product", name: navigation.categories.product },
   ];
 
-  const menuItems = [
-    { key: "portfolio", name: navigation.portfolio },
-    { key: "about", name: navigation.about, route: `/${lang}/about` },
-    { key: "contact", name: navigation.contact, route: `/${lang}/contact` },
-  ];
+  const handleDropDown = () => {
+    setDropDown(!dropDown);
+  };
 
   return (
     <Navbar
@@ -67,11 +67,14 @@ export default function Nav({ navigation, lang }) {
       <NavbarContent justify="start">
         <NavbarBrand>
           <Link href={`/${lang}`}>
-            <SiteLogo w={150} h={150} theme={theme} />
+            <SiteLogo w={175} h={175} theme={theme} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link href={`/${lang}`}>{navigation.home}</Link>
+        </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -79,7 +82,7 @@ export default function Nav({ navigation, lang }) {
                 color={path.includes("portfolio") ? "secondary" : ""}
                 disableRipple
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent cursor-pointer"
-                startContent={icons.dropdown}
+                endContent={icons.dropdown}
                 radius="sm"
                 variant="light"
               >
@@ -135,21 +138,51 @@ export default function Nav({ navigation, lang }) {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            isActive={path === `/${lang}/${item.key}`}
-            key={index}
+        <NavbarMenuItem isActive={path === `/${lang}`}>
+          <Link href={`/${lang}`}>{navigation.home}</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem
+          className="text-md flex flex-col gap-2"
+          onClick={handleDropDown}
+          isActive={dropDown}
+        >
+          <div className={`flex gap-2 ${dropDown && "text-secondary"}`}>
+            {navigation.portfolio}
+            <RiArrowDropDownLine size={24} />
+          </div>
+
+          {dropDown && (
+            <ul className="mb-5 ml-5 font-normal">
+              {categories.map((category) => (
+                <li
+                  className="pb-2"
+                  as={Link}
+                  href={`/${lang}/portfolio/${category.key}`}
+                  key={category.key}
+                  startContent={icons[category.key]}
+                >
+                  {category.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </NavbarMenuItem>
+        <NavbarMenuItem isActive={path === `/${lang}/about`}>
+          <Link
+            color={path === `/${lang}/about` ? "secondary" : ""}
+            href={`/${lang}/about`}
           >
-            <Link
-              color={"foreground"}
-              className="w-full"
-              href={`/${lang}/${item.key}`}
-              size="lg"
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+            {navigation.about}
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem isActive={path === `/${lang}/contact`}>
+          <Link
+            color={path === `/${lang}/contact` ? "secondary" : ""}
+            href={`/${lang}/contact`}
+          >
+            {navigation.contact}
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

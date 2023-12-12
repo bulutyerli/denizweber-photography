@@ -13,7 +13,8 @@
     }
   },
   "button": {
-    "send": "Senden"
+    "send": "Senden",
+    "close": "Schließen"
   },
   "categories": {
     "baby": "Baby- und Familienfotos",
@@ -31,5 +32,12 @@
     "enterSurname": "Geben Sie Ihren Nachnamen ein",
     "enterEmail": "Geben Sie Ihre E-Mail-Adresse ein",
     "enterMessage": "Was ist Ihre Nachricht?"
+  },
+  "reviewsSection": {
+    "title": "Liebe Worte"
+  },
+  "serviceSection": {
+    "title": "Meine Dienstleistungen",
+    "link": "Klicken Sie für das Portfolio"
   }
 }

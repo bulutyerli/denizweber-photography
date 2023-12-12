@@ -1,15 +1,16 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
+import { defineType, defineField } from "sanity";
+
+export const portfolio = defineType({
   name: "portfolioItem",
   title: "Portfolio Item",
   type: "document",
   fields: [
-    {
+    defineField({
       name: "title",
       title: "Title",
       type: "string",
-    },
-    {
+    }),
+    defineField({
       name: "category",
       title: "Category",
       type: "string",
@@ -22,8 +23,8 @@ export default {
         ],
       },
       validation: (Rule) => Rule.required(),
-    },
-    {
+    }),
+    defineField({
       name: "image",
       title: "Image",
       type: "image",
@@ -31,7 +32,7 @@ export default {
         hotspot: true,
       },
       validation: (Rule) => Rule.required(),
-    },
+    }),
   ],
   preview: {
     select: {
@@ -48,4 +49,4 @@ export default {
       };
     },
   },
-};
+});

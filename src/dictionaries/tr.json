@@ -13,7 +13,8 @@
     }
   },
   "button": {
-    "send": "Gönder"
+    "send": "Gönder",
+    "close": "Kapat"
   },
   "categories": {
     "baby": "Bebek ve Aile Fotoğrafları",
@@ -31,5 +32,12 @@
     "enterSurname": "Soyadınızı yazın",
     "enterEmail": "E-Posta adresinizi yazın",
     "enterMessage": "Mesajınız nedir?"
+  },
+  "reviewsSection": {
+    "title": "Nazik Sözler"
+  },
+  "serviceSection": {
+    "title": "Hizmetlerim",
+    "link": "Portfolyo İçin Tıklayın"
   }
 }
