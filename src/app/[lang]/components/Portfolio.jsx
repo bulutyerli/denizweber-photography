@@ -11,7 +11,6 @@ import {
   ModalFooter,
   Button,
 } from "@nextui-org/react";
-import NextImage from "next/image";
 
 export default function Portfolio({ images, translate }) {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
@@ -33,7 +32,6 @@ export default function Portfolio({ images, translate }) {
               onClick={() => handleOpen(image)}
             >
               <Image
-                as={NextImage}
                 className="object-cover h-36 lg:h-96 w-auto flex-grow cursor-pointer"
                 src={image.imageUrl}
                 height={500}
@@ -61,7 +59,6 @@ export default function Portfolio({ images, translate }) {
               </ModalHeader>
               <ModalBody className="max-h-screen">
                 <Image
-                  as={NextImage}
                   className="object-fill"
                   src={selectedImage.imageUrl}
                   width={1200}

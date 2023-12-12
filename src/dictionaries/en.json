@@ -8,8 +8,8 @@
     "categories": {
       "baby": "Baby & Family",
       "wedding": "Wedding",
-      "event": "Event",
-      "product": "Product"
+      "events": "Event",
+      "products": "Product"
     }
   },
   "button": {
@@ -19,8 +19,8 @@
   "categories": {
     "baby": "Baby & Family Photographs",
     "wedding": "Wedding Photographs",
-    "event": "Event Photographs",
-    "product": "Product Photographs"
+    "events": "Event Photographs",
+    "products": "Product Photographs"
   },
   "form": {
     "title": "Contact Me",
