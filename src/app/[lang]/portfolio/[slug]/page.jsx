@@ -1,11 +1,11 @@
-import client from "@/app/[lang]/client/client";
+import client from "@/lib/client";
 import { groq } from "next-sanity";
 import Portfolio from "@/app/[lang]/components/Portfolio";
 import { getDictionary } from "@/lib/dictionary";
 
 export default async function Page({ params, params: { lang } }) {
   const { slug } = params;
-  const { categories } = await getDictionary(lang);
+  const { categories, button } = await getDictionary(lang);
 
   const images = await client.fetch(
     groq`
@@ -17,10 +17,17 @@ export default async function Page({ params, params: { lang } }) {
     { slug }
   );
 
+  console.log(images);
+
   return (
-    <div className="flex flex-col items-center justify-center gap-10">
-      <h1 className="text-4xl font-hand">{categories[slug]}</h1>
-      <Portfolio images={images} />
+    <div className="flex flex-col items-center justify-center gap-10 mt-20">
+      <h1 className="text-4xl font-whisper text-foreground-600">
+        {categories[slug]}
+      </h1>
+      <Portfolio
+        translate={button}
+        images={images.filter((image) => image.imageUrl)}
+      />
     </div>
   );
 }

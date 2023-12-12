@@ -10,14 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       fontFamily: {
         sans: ["var(--font-inter)"],
-        hand: ["var(--font-whisper)"],
+        whisper: ["var(--font-whisper)"],
+        lora: ["var(--font-lora)"],
       },
     },
   },
@@ -32,8 +28,6 @@ module.exports = {
         light: {
           layout: {},
           colors: {
-            background: "#FFFFFF",
-            foreground: "#18181B",
             secondary: "#e56b6f",
             primary: "#18181B",
           },
@@ -41,8 +35,7 @@ module.exports = {
         dark: {
           layout: {},
           colors: {
-            background: "#18181B",
-            foreground: "#E4E4E7",
+            background: "#151519",
             secondary: "#e56b6f",
             primary: "#E4E4E7",
           },

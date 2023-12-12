@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import NextImage from "next/image";
 
-export default function Portfolio({ images }) {
+export default function Portfolio({ images, translate }) {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -25,23 +25,24 @@ export default function Portfolio({ images }) {
   return (
     <>
       <div className="flex flex-wrap gap-2 w-screen xl:px-6 items-center justify-center">
-        {images.map((image, i) => (
-          <div
-            className="flex items-center justify-center cursor-pointer"
-            key={i}
-            onClick={() => handleOpen(image)}
-          >
-            <Image
-              as={NextImage}
-              className="object-cover h-36 lg:h-96 w-auto flex-grow cursor-pointer"
-              src={image.imageUrl}
-              height={500}
-              width={500}
-              alt={image.title}
-              isZoomed
-            ></Image>
-          </div>
-        ))}
+        {images.length > 0 &&
+          images.map((image, i) => (
+            <div
+              className="flex items-center justify-center cursor-pointer"
+              key={i}
+              onClick={() => handleOpen(image)}
+            >
+              <Image
+                as={NextImage}
+                className="object-cover h-36 lg:h-96 w-auto flex-grow cursor-pointer"
+                src={image.imageUrl}
+                height={500}
+                width={500}
+                alt={image.title}
+                isZoomed
+              ></Image>
+            </div>
+          ))}
       </div>
       <Modal
         size="2xl"
@@ -70,7 +71,7 @@ export default function Portfolio({ images }) {
               </ModalBody>
               <ModalFooter>
                 <Button color="foreground" variant="light" onPress={onClose}>
-                  Close
+                  {translate.close}
                 </Button>
               </ModalFooter>
             </>

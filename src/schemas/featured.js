@@ -4,21 +4,20 @@ export const featuredImageType = defineType({
   title: "Featured Images",
   name: "featured",
   type: "document",
+
   fields: [
     defineField({
-      name: "images",
-      title: "Images",
-      type: "array",
-      of: [{ type: "image" }],
+      name: "title",
+      title: "title",
+      type: "string",
+    }),
+    defineField({
+      name: "image",
+      title: "image",
+      type: "image",
       options: {
-        layout: "grid",
+        hotspot: true,
       },
-      validation: (Rule) => Rule.required(),
     }),
   ],
-  preview: {
-    select: {
-      media: "images.0",
-    },
-  },
 });

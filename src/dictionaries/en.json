@@ -13,7 +13,8 @@
     }
   },
   "button": {
-    "send": "Send"
+    "send": "Send",
+    "close": "Close"
   },
   "categories": {
     "baby": "Baby & Family Photographs",
@@ -31,5 +32,12 @@
     "enterSurname": "Enter your surname",
     "enterEmail": "Enter your email address",
     "enterMessage": "What is your message?"
+  },
+  "reviewsSection": {
+    "title": "Kind Words"
+  },
+  "serviceSection": {
+    "title": "My Services",
+    "link": "Click For Portfolio"
   }
 }
