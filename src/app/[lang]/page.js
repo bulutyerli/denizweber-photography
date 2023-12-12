@@ -5,7 +5,6 @@ import ImageCarousel from "./components/ImageCarousel";
 import ClientReview from "./components/ClientReview";
 import Services from "./components/Services";
 import { getDictionary } from "@/lib/dictionary";
-import SiteLogo from "./components/SiteLogo";
 
 export default async function Home({ params: { lang } }) {
   const { reviewsSection, serviceSection } = await getDictionary(lang);
@@ -48,14 +47,9 @@ export default async function Home({ params: { lang } }) {
         <ImageCarousel images={images}></ImageCarousel>
       </div>
       <div className="flex flex-col gap-32 m-2 md:col-start-5 md:col-end-13">
-        <div className="flex flex-col gap-10">
-          <div className="flex justify-center">
-            <SiteLogo w={300} h={200} />
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-9xl text-center font-whisper text-foreground-800 mx-20">
-            {greetMessage.greet}
-          </h1>
-        </div>
+        <h1 className="flex flex-col justify-center text-5xl md:text-7xl md:h-96 lg:text-9xl text-center font-whisper text-foreground-800 mx-20">
+          {greetMessage.greet}
+        </h1>
         <div className="md:mx-auto">
           <h2 className="text-4xl font-whisper text-foreground-600 pb-6">
             {serviceSection.title}

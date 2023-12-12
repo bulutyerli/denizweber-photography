@@ -8,8 +8,8 @@
     "categories": {
       "baby": "Bebek ve Aile",
       "wedding": "Düğün",
-      "event": "Etkinlik",
-      "product": "Ürün"
+      "events": "Etkinlik",
+      "products": "Ürün"
     }
   },
   "button": {
@@ -19,8 +19,8 @@
   "categories": {
     "baby": "Bebek ve Aile Fotoğrafları",
     "wedding": "Düğün Fotoğrafları",
-    "event": "Etkinlik Fotoğrafları",
-    "product": "Ürün Fotoğrafları"
+    "events": "Etkinlik Fotoğrafları",
+    "products": "Ürün Fotoğrafları"
   },
   "form": {
     "title": "Bana Yazın",

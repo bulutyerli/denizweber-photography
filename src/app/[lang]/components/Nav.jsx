@@ -14,7 +14,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  dropdown,
 } from "@nextui-org/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoFlowerOutline, IoBalloon } from "react-icons/io5";
@@ -37,15 +36,15 @@ export default function Nav({ navigation, lang }) {
     dropdown: <RiArrowDropDownLine fill="currentColor" size={16} />,
     wedding: <IoFlowerOutline fill="currentColor" size={16} />,
     baby: <LiaBabyCarriageSolid fill="currentColor" size={16} />,
-    event: <IoBalloon fill="currentColor" size={16} />,
-    product: <PiDress fill="currentColor" size={16} />,
+    events: <IoBalloon fill="currentColor" size={16} />,
+    products: <PiDress fill="currentColor" size={16} />,
   };
 
   const categories = [
     { key: "wedding", name: navigation.categories.wedding },
     { key: "baby", name: navigation.categories.baby },
-    { key: "event", name: navigation.categories.event },
-    { key: "product", name: navigation.categories.product },
+    { key: "events", name: navigation.categories.events },
+    { key: "products", name: navigation.categories.products },
   ];
 
   const handleDropDown = () => {
@@ -154,14 +153,15 @@ export default function Nav({ navigation, lang }) {
           {dropDown && (
             <ul className="mb-5 ml-5 font-normal">
               {categories.map((category) => (
-                <li
-                  className="pb-2"
-                  as={Link}
-                  href={`/${lang}/portfolio/${category.key}`}
-                  key={category.key}
-                  startContent={icons[category.key]}
-                >
-                  {category.name}
+                <li key={category.key}>
+                  <Link
+                    className="pb-2"
+                    as={Link}
+                    href={`/${lang}/portfolio/${category.key}`}
+                    startContent={icons[category.key]}
+                  >
+                    {category.name}
+                  </Link>
                 </li>
               ))}
             </ul>
