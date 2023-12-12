@@ -2,15 +2,12 @@ import client from "@/lib/client";
 import { groq } from "next-sanity";
 import Portfolio from "@/app/[lang]/components/Portfolio";
 import { getDictionary } from "@/lib/dictionary";
-import imageUrlBuilder from "@sanity/image-url";
+
+export const revalidate = 10;
 
 export default async function Page({ params, params: { lang } }) {
   const { slug } = params;
   const { categories, button } = await getDictionary(lang);
-  const builder = imageUrlBuilder(client);
-  function urlFor(source) {
-    return builder.image(source);
-  }
 
   const images = await client.fetch(
     groq`
