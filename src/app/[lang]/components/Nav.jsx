@@ -51,6 +51,10 @@ export default function Nav({ navigation, lang }) {
     setDropDown(!dropDown);
   };
 
+  const handleMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
@@ -138,7 +142,9 @@ export default function Nav({ navigation, lang }) {
           <ThemeSwitcher />
         </NavbarItem>
         <NavbarMenuItem isActive={path === `/${lang}`}>
-          <Link href={`/${lang}`}>{navigation.home}</Link>
+          <Link onPress={handleMenu} href={`/${lang}`}>
+            {navigation.home}
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem
           className="text-md flex flex-col gap-2"
@@ -155,6 +161,7 @@ export default function Nav({ navigation, lang }) {
               {categories.map((category) => (
                 <li key={category.key}>
                   <Link
+                    onPress={handleMenu}
                     className="pb-2"
                     as={Link}
                     href={`/${lang}/portfolio/${category.key}`}
@@ -169,6 +176,7 @@ export default function Nav({ navigation, lang }) {
         </NavbarMenuItem>
         <NavbarMenuItem isActive={path === `/${lang}/about`}>
           <Link
+            onPress={handleMenu}
             color={path === `/${lang}/about` ? "secondary" : ""}
             href={`/${lang}/about`}
           >
@@ -177,6 +185,7 @@ export default function Nav({ navigation, lang }) {
         </NavbarMenuItem>
         <NavbarMenuItem isActive={path === `/${lang}/contact`}>
           <Link
+            onPress={handleMenu}
             color={path === `/${lang}/contact` ? "secondary" : ""}
             href={`/${lang}/contact`}
           >
