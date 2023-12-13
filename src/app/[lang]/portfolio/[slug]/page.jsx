@@ -15,11 +15,11 @@ export default async function Page({ params, params: { lang } }) {
             category,
           }`,
     {
+      slug,
       next: {
         revalidate: 10,
       },
-    },
-    { slug }
+    }
   );
 
   return (
