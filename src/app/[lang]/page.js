@@ -18,7 +18,12 @@ export default async function Home({ params: { lang } }) {
     *[_type == "featured"] {
       title,
       "imageUrl": image.asset->url
-    }`
+    }`,
+    {
+      next: {
+        revalidate: 3600, // look for updates to revalidate cache every hour
+      },
+    }
   );
 
   const images = featuredImages.map((image) => ({
@@ -31,14 +36,24 @@ export default async function Home({ params: { lang } }) {
     *[_type == "reviews"] {
       title, 
       "content": content.${lang},
-    }`
+    }`,
+    {
+      next: {
+        revalidate: 3600, // look for updates to revalidate cache every hour
+      },
+    }
   );
 
   const greetMessage = await client.fetch(
     groq`
     *[_type == "greeting"][0] {
       "greet": greet.${lang}
-    }`
+    }`,
+    {
+      next: {
+        revalidate: 3600, // look for updates to revalidate cache every hour
+      },
+    }
   );
 
   return (

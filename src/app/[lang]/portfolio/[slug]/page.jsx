@@ -3,8 +3,6 @@ import { groq } from "next-sanity";
 import Portfolio from "@/app/[lang]/components/Portfolio";
 import { getDictionary } from "@/lib/dictionary";
 
-export const revalidate = 10;
-
 export default async function Page({ params, params: { lang } }) {
   const { slug } = params;
   const { categories, button } = await getDictionary(lang);
@@ -16,6 +14,11 @@ export default async function Page({ params, params: { lang } }) {
             "imageUrl": image.asset->url,
             category,
           }`,
+    {
+      next: {
+        revalidate: 10,
+      },
+    },
     { slug }
   );
 

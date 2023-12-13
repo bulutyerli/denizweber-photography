@@ -12,12 +12,15 @@ export default async function BioPage({ params: { lang } }) {
       title,
       "content": content.${lang},
       "imageUrl": image.asset->url,
-    }`
+    }`,
+    {
+      next: {
+        revalidate: 3600, // look for updates to revalidate cache every hour
+      },
+    }
   );
 
   const text = data.content.split("\n");
-
-  console.log(lang);
 
   return (
     <section className="flex flex-col items-center justify-between h-full gap-10 pt-16 px-6">
