@@ -5,6 +5,7 @@ const client = createClient({
   dataset: process.env.SANITY_DATASET,
   apiVersion: process.env.SANITY_API_VERSION,
   useCdn: true,
+  perspective: "published",
 });
 
 export default client;

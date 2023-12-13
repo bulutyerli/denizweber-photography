@@ -3,6 +3,8 @@ import { groq } from "next-sanity";
 import Portfolio from "@/app/[lang]/components/Portfolio";
 import { getDictionary } from "@/lib/dictionary";
 
+export const fetchCache = "force-no-store";
+
 export default async function Page({ params, params: { lang } }) {
   const { slug } = params;
   const { categories, button } = await getDictionary(lang);
