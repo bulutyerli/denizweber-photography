@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
 
-## Getting Started
+Deniz Weber Photopgraphy
 
-First, run the development server:
+## Description
+
+This is a Next.js project that i made for a photographer. I also used Sanity.io as content management system and tailwind for styling. Implemented i18n for 3 language support.
+
+## Website Link
+
+[Visit the website](https://denizweber.vercel.app)
+
+## Features
+
+- **Sanity.io Integration**: Easily manage and update content with Sanity.io.
+- **Internationalization (i18n)**: Support for multiple languages. English, Turkish and German
+- **Tailwind CSS**
+- **Dark Mode**:
+
+## Technologies Used
+
+- **Next.js**: React framework for building server-side rendered (SSR) web applications.
+- **Sanity.io**: Headless CMS for content management and structured data.
+- **Tailwind CSS**: Utility-first CSS framework for building custom designs quickly.
+- **NextUI**: Component library for Next.js projects, providing reusable UI components.
+- **Internationalization (i18n)**: Implementation for multi-language support.
+- **Dark Mode**: UI feature for better readability in low-light environments.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/bulutyerli/denizweber-photography.git
+```
+
+2. Install dependencies:
+
+```bash
+cd project-name
+npm install
+```
+
+3. Set up environment variables:
+
+   - Create a `.env.local` file in the root directory.
+   - Add required environment variables
+   - SANITY_PROJECT_ID
+     SANITY_DATASET
+     SANITY_API_VERSION
+     RESEND_API_KEY
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Use Sanity Studio to manage content. Access the studio at [http://localhost:3000/studio].
+- Customize styles and layouts using Tailwind CSS utility classes.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE).
